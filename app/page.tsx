@@ -1,12 +1,11 @@
-import Image from "next/image";
+import UnderConstruct from "./UnderConstruct/page";
 import LateralMenu from "./components/LateralMenu";
-import Main from "./components/Main";
+import Home from "./home/page";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen bg-gray-200">
-      <LateralMenu />
-      <Main />
+    <main className="flex w-full bg-gray-200">
+      <Home/>
     </main>
   );
 }
