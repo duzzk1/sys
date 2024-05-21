@@ -13,12 +13,12 @@ const LastInvoices = (props: {
         <div className="flex border rounded-xl p-3 bg-gray-300 items-center w-1/2 h-36 justify-between">
             <div className="text-wrap text-justify">
                 <p>{props.titulo}</p>
-                <p className="text-green-600">R${props.valor}</p>
+                <p className='text-green-600 after:content-[]'>R${props.valor}</p>
             </div>
-            <div className="w-1/4 flex items-center text-center font-semibold text-xs cursor-pointer hover:translate-x-2 transition-all duration-600">
+            <div className="w-1/4 flex items-center justify-end text-center font-semibold text-xs cursor-pointer hover:translate-x-2 transition-all duration-600">
                 <Link href={'/UnderConstruct'} className="flex items-center text-center">
                     <span className="hidden md:block text-nowrap">Ver mais</span>
-                    <ArrowForwardIosIcon/>
+                    <ArrowForwardIosIcon />
                 </Link>
             </div>
         </div>

@@ -16,13 +16,16 @@ const LateralMenu = () => {
     return (
         <div className={!isOpenMenu ? 'fixed flex flex-col items-center max-w-20 h-screen transition-all duration-1000 bg-indigo-950 z-50' : 'flex fixed flex-col items-center max-w-52 h-full transition-all duration-1000 rounded-r bg-indigo-950 z-50'} onMouseEnter={() => { setIsOpenMenu(true) }} onMouseLeave={() => { setIsOpenMenu(false) }}>
             <div className="flex flex-col">
-                <Image
-                    src={Logo}
-                    alt="Description of your image"
-                    width={68}
-                    height={68}
-                    className="block w-full h-40"
-                />
+                <Link href={'/'}>
+                    <Image
+                        src={Logo}
+                        alt="Logo duzzk"
+                        width={68}
+                        height={68}
+                        className="block w-full h-40"
+                    />
+                </Link>
+
                 <div className="w-full h-[1px] bg-white" />
             </div>
 
