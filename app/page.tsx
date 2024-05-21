@@ -4,7 +4,7 @@ import Home from "./home/page";
 
 export default function Page() {
   return (
-    <main className="flex w-full bg-gray-200">
+    <main className="flex w-full bg-gray-200 p-10">
       <Home/>
     </main>
   );

@@ -40,12 +40,6 @@ const LateralMenu = () => {
                             <span className={textClass}>Library</span>
                         </Link>
                     </li>
-                    <li className='flex w-full justify-center items-center bg-white'>
-                        <Link href='/UnderConstruct' className="w-full">
-                            <Person className={iconClass} />
-                            <span className={textClass}>Account</span>
-                        </Link>
-                    </li>
                 </ul>
             </nav>
             <div className="w-full h-[1px] bg-white absolute bottom-32" />
