@@ -1,12 +1,10 @@
-import { Search } from "@mui/icons-material";
 import SearchInput from "../components/SearchInput";
-import PhoneIcon from "@/app/images/phoneIcon.png"
-import supportIcon from "@/app/images/supportIcon.svg"
-import Image from "next/image";
 import WelcomeHeader from "@/app/components/WelcomeHeader";
 import WelcomeContainer from "@/app/components/WelcomeContainer";
 import Divider from "@/app/components/Divider";
 import LastInvoices from "../components/LastInvoices";
+import Relatories from "../components/Relatories";
+import Contact from "../components/Contact";
 
 const Home = () => {
     return (
@@ -17,10 +15,12 @@ const Home = () => {
                 <Divider />            
                 <WelcomeContainer />    
                 <Divider />
-                <div className="flex w-full gap-2">
-                    <LastInvoices titulo={'Nota fiscal 0001'} valor={'2.400'}/>        
-                    <LastInvoices titulo={'Nota fiscal 0002'} valor={'25.000'}/>        
-                </div>
+                <Relatories />
+                <Divider />
+                <LastInvoices />
+                <Divider />
+                <Contact />
+                <Divider />
             </div>
         </div>
     );

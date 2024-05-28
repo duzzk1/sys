@@ -5,7 +5,7 @@ const WelcomeContainer = () => {
     return (
         <div className="flex justify-between items-center">
             <div>
-                <h2 className="font-bold text-2xl text-purple-900">Olá, Duzzk</h2>
+                <h2 className="font-bold text-2xl text-purple-900">Olá, Cliente</h2>
                 <p className="text-sm">Aproveite seu dia!</p>
             </div>
             <div>

@@ -1,28 +1,15 @@
-import Image from "next/image";
-import storeIcon from "@/app/images/storeIcon.png"
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Link from "next/link";
+import { NextPage } from 'next'
+import LastInvoice from './LastInvoice'
 
+interface Props {}
 
-
-const LastInvoices = (props: {
-    titulo: string;
-    valor: string;
-}) => {
-    return (
-        <div className="flex border rounded-xl p-3 bg-gray-300 items-center w-1/2 h-36 justify-between">
-            <div className="text-wrap text-justify">
-                <p>{props.titulo}</p>
-                <p className='text-green-600 after:content-[]'>R${props.valor}</p>
-            </div>
-            <div className="w-1/4 flex items-center justify-end text-center font-semibold text-xs cursor-pointer hover:translate-x-2 transition-all duration-600">
-                <Link href={'/UnderConstruct'} className="flex items-center text-center">
-                    <span className="hidden md:block text-nowrap">Ver mais</span>
-                    <ArrowForwardIosIcon />
-                </Link>
-            </div>
-        </div>
-    );
+const LastInvoices: NextPage<Props> = ({}) => {
+  return (
+    <div className="flex w-full gap-2">
+        <LastInvoice titulo={'Nota fiscal 0001'} valor={'2.400'}/>        
+        <LastInvoice titulo={'Nota fiscal 0002'} valor={'25.000'}/>        
+    </div>  
+    )
 }
 
-export default LastInvoices;
+export default LastInvoices
