@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import LateralMenu from "./components/LateralMenu";
+import '@radix-ui/themes/styles.css';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
