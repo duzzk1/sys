@@ -8,8 +8,8 @@ import Contact from "../components/Contact";
 
 const Home = () => {
     return (
-        <div className="flex flex-col w-full h-full items-center p-2 ml-20">
-            <div className="w-full h-full border">
+        <div className="container h-full">
+            <div className="w-full h-full border ml-12">
                 <WelcomeHeader />
                 <SearchInput />
                 <Divider />            

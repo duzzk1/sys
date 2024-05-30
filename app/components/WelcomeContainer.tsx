@@ -3,7 +3,7 @@ import storeIcon from "@/app/images/storeIcon.png"
 import Link from "next/link";
 const WelcomeContainer = () => {
     return (
-        <div className="flex z-1 border border-purple-900 transition-all duration-500 rounded-xl w-full h-28 p-3 bg-indigo-950 items-center justify-between">
+        <div className="container flex z-1 border border-purple-900 transition-all duration-500 rounded-xl w-full h-28  bg-indigo-950 items-center justify-between">
             <div className="block">
                 <p className="relative bottom-3 font-bold text-2xl text-white">Bem vindo</p>
                 <p className="relative text-sm tracking-widest text-white">Bora emitir suas notas carai</p>
