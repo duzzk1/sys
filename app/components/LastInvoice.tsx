@@ -24,24 +24,22 @@ const LastInvoice = (props: {
                     <p className="text-center">{props.number}</p>
                     <p className='text-green-600 after:content-[] text-center'>R${props.valor}</p>
                 </div>
-                <div className="flex flex-col items-center justify-center sm:justify-end text-center font-semibold text-xs cursor-pointer sm:hover:-translate-y-2 hover:translate-x-0 transition-all duration-600 w-full">
-                    <Link href={'/UnderConstruct'} className="flex items-center text-center">
-                    <TooltipProvider delayDuration={200}>
+                <TooltipProvider delayDuration={200}>
+                    <div className="flex flex-col items-center justify-center sm:justify-end text-center font-semibold text-xs cursor-pointer sm:hover:-translate-y-2 hover:translate-x-0 transition-all duration-600 w-full">
+                        <Link href={'/UnderConstruct'} className="flex items-center text-center">
                             <Tooltip>
                                 <TooltipTrigger>
                                     <Badge variant="secondary">
                                         <Info className="h-4 w-4" />
                                     </Badge>      
                                 </TooltipTrigger>
-                                <TooltipContent side="left" sticky="always" updatePositionStrategy="optimized">
+                                <TooltipContent>
                                     <p>Informações</p>
                                 </TooltipContent>
                             </Tooltip>
-                        </TooltipProvider>
-
-                    </Link>
-
-                </div>
+                        </Link>
+                    </div>
+                </TooltipProvider>
             </div>
         </div>
     );
