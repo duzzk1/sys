@@ -1,6 +1,4 @@
-import Image from "next/image";
-import storeIcon from "@/app/images/storeIcon.png"
-import { SwissFranc, GalleryHorizontalEnd, Info, ChevronLeft } from "lucide-react"
+import { Info } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 import {
