@@ -24,7 +24,7 @@ const LastInvoice = (props: {
                 </div>
                 <TooltipProvider delayDuration={200}>
                     <div className="flex flex-col items-center justify-center sm:justify-end text-center font-semibold text-xs cursor-pointer sm:hover:-translate-y-2 hover:translate-x-0 transition-all duration-600 w-full">
-                        <Link href={'/UnderConstruct'} className="flex items-center text-center">
+                        <Link href={'/invoices?invoiceNumber='+props.number} className="flex items-center text-center">
                             <Tooltip>
                                 <TooltipTrigger>
                                     <Badge variant="secondary">
