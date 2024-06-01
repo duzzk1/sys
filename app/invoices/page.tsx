@@ -1,53 +1,38 @@
-'use client'
+'use client';
 
-import { useSearchParams } from 'next/navigation';
-
-const notasApiFake = [
-    {
-      'id' : 1,
-      'titulo' : 'Instalação de internet',
-      'valor' : '700,00',
-      'number' : '000000001'
-    },
-    {
-      'id' : 2,
-      'titulo' : 'Conserto de telefone',
-      'valor' : '234,90',
-      'number' : '000000002'
-    },
-    {
-      'id' : 3,
-      'titulo' : 'Ajuste de senha de internet',
-      'valor' : '50,00',
-      'number' : '000000003'
-
-    }
-  ];
-
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import GetInvoiceByNumber from "@/api/GetInvoiceByNumber";
 
 const Invoices = () => {
     const searchParams = useSearchParams();
     const invoiceNumber = searchParams.get('invoiceNumber');
+    const invoice = GetInvoiceByNumber(invoiceNumber);
     
-  
-    const filteredNota = notasApiFake.filter((nota) => nota.number === invoiceNumber);
-
-    return (
-      <div className="flex flex-col w-screen h-screen justify-center items-center bg-gray-200">
-        {
-          filteredNota.map((nota) => (
-            <div key={nota.id} className='flex flex-col justify-center items-center'>
-              <h1 className='text-2xl'>{nota.titulo}</h1>
-              <p>{nota.valor}</p>
+return (
+    < Suspense fallback={
+        <Alert className="flex h-screen flex-col justify-center items-center">
+            <AlertTitle>Aguarde!</AlertTitle>
+            <AlertDescription>
+                Carregando nota fiscal.
+            </AlertDescription>
+        </Alert>
+    }>
+    {   
+        invoice.then(
+            res =>  
+                <div key={res._id} className="flex flex-col w-screen h-screen justify-center items-center bg-gray-200">
+                    <div className="flex flex-col justify-center items-center">
+                    <h1 className="text-2xl">{res.title}</h1>
+                    <p>R${res.value}</p>
+                    </div>
+                <h1 className="font-bold text-xl">Página da nota {res.number}</h1>
             </div>
-          ))
-        }
-        {
-            filteredNota.map((nota) => (
-                <h1 key={nota.id} className="font-bold text-xl">Página da nota {nota.number}</h1>
-            ))
-        }
-      </div>
+        )
+    }
+    </Suspense>
     );
-  };
+};
+
 export default Invoices;
