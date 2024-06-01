@@ -1,15 +1,12 @@
 'use client'
 import { useState } from "react";
 import Image from 'next/image'
-import Logo from '@/app/images/logo.svg'
+import Logo from '@/app/assets/images/logo.svg'
 import Link from "next/link";
 import { Home } from "@mui/icons-material";
 import { LibraryBooks } from "@mui/icons-material";
-import { Person } from "@mui/icons-material";
 import { Store } from "@mui/icons-material";
 const LateralMenu = () => {
-
-
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const textClass = !isOpenMenu ? 'absolute opacity-0 transition-all duration-3000 uppercase text-white' : 'absolute opacity-1 transition-all duration-1000 -ml-7 uppercase text-white'
     const iconClass = !isOpenMenu ? 'absolute left-6 text-white' : 'absolute left-6 text-white'
@@ -38,7 +35,7 @@ const LateralMenu = () => {
                         </Link>
                     </li>
                     <li className='flex w-full justify-center items-center bg-white'>
-                        <Link href='/UnderConstruct' className="w-full">
+                        <Link href='/library' className="w-full">
                             <LibraryBooks className={iconClass} />
                             <span className={textClass}>Library</span>
                         </Link>

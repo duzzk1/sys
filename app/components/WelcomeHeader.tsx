@@ -1,4 +1,3 @@
-import { Person } from "@mui/icons-material";
 import Link from "next/link";
 import {
     Avatar,
@@ -13,7 +12,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-const WelcomeContainer = () => {
+const WelcomeHeader = () => {
     return (
         <div className="flex items-center justify-between">
             <div>
@@ -44,4 +43,4 @@ const WelcomeContainer = () => {
     );
 }
 
-export default WelcomeContainer;
+export default WelcomeHeader;

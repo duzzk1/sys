@@ -1,5 +1,5 @@
 import Image from "next/image";
-import storeIcon from "@/app/images/storeIcon.png"
+import storeIcon from "@/app/assets/images/storeIcon.png"
 import Link from "next/link";
 const WelcomeContainer = () => {
     return (

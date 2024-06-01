@@ -1,13 +1,12 @@
 import { Info } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-
+import Link from "next/link";
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger
 } from "@/components/ui/tooltip"
-import Link from "next/link";
 
 const LastInvoice = (props: {
     titulo: string;

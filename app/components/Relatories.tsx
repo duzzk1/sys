@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Dashboard from './Dashboard'
+import Dashboard from '@/app/components/Dashboard'
 
 interface Props {}
 

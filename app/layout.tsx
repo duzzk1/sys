@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import LateralMenu from "./components/LateralMenu";
+import LateralMenu from "@/app/components/LateralMenu";
 import '@radix-ui/themes/styles.css';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <AppRouterCacheProvider>
-          <LateralMenu />
+          <LateralMenu/>
           {children}
         </AppRouterCacheProvider>
       </body>

@@ -1,10 +1,10 @@
-import SearchInput from "../components/SearchInput";
+import SearchInput from "@/app/components/SearchInput";
 import WelcomeHeader from "@/app/components/WelcomeHeader";
 import WelcomeContainer from "@/app/components/WelcomeContainer";
 import Divider from "@/app/components/Divider";
-import LastInvoices from "../components/LastInvoices";
-import Relatories from "../components/Relatories";
-import Contact from "../components/Contact";
+import LastInvoices from "@/app/components/LastInvoices";
+import Relatories from "@/app/components/Relatories";
+import Contact from "@/app/components/Contact";
 
 const Home = () => {
     return (

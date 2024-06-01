@@ -2,7 +2,7 @@
 import { Search } from "@mui/icons-material";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { useState, useEffect, SetStateAction } from "react";
+import { useState, SetStateAction } from "react";
 
 const SearchInput = () => {    
     const [searchInput, setSearchInput] = useState('');

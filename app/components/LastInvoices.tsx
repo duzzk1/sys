@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import CarouselContainer from './CarouselContainer';
+import CarouselContainer from '@/app/components/CarouselContainer';
 interface Props {}
 
 const LastInvoices: NextPage<Props> = ({}) => {

@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import GetInvoiceByNumber from "@/api/GetInvoiceByNumber";
+import GetInvoiceByNumber from "@/api/getInvoiceByNumber";
 
 const Invoices = () => {
     const searchParams = useSearchParams();

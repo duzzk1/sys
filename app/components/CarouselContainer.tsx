@@ -1,5 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
-import LastInvoice from './LastInvoice'
+import LastInvoice from '@/app/components/LastInvoice'
 import {
     Tooltip,
     TooltipContent,
@@ -8,7 +8,7 @@ import {
   } from "@/components/ui/tooltip"
 import SwipeLeft from '@mui/icons-material/SwipeLeft'
 import { Key } from 'react';
-import GetAllInvoices from '@/api/GetAllInvoices';
+import GetAllInvoices from '@/api/getAllInvoices';
 
 const CarouselContainer = () => {
     const invoices = GetAllInvoices();
